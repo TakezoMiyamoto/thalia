@@ -10,8 +10,18 @@
         <%= devise_error_messages! %>
 
         <div class="form-group">
+          <%= f.label :username, "お名前" %> <em>(6文字以内)</em><br>
+          <%= f.text_field :name, autofocus: true  %>
+        </div>
+
+        <div class="form-group">
           <%= f.label :email, "メールアドレス" %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :avatar, "プロフィール画像" %>
+          <%= f.file_field :avatar, class: "form-control" %>
         </div>
 
         <div class="form-group">
