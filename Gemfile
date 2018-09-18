@@ -42,6 +42,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'kaminari'
 gem 'jquery-rails'
+gem 'bootstrap-sass'
 gem 'twitter-bootstrap-rails', '4.0.0'
 
 group :development, :test do
