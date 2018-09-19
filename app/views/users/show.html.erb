@@ -14,8 +14,10 @@
             <% else %>
                 <p><%= link_to image_tag(@user.avatar.url , alt: @user.username), user_path(@user) %></p>
             <% end %>
+            <%= @user.introduce %><br/>
+
             <% if @user == current_user %>
-                <%= link_to "プロフィールの編集", edit_user_path(@user), class: "btn btn-large btn-info" %>
+                <%= link_to "プロフィールの編集", edit_user_path(@user), class: "btn btn-large btn-info edit-btn" %>
             <% end %>
 
         </div>

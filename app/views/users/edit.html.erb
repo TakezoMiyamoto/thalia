@@ -20,6 +20,11 @@
         </div><br/>
 
         <div class="form-group">
+          <%= f.label :introduce, "自己紹介" %>
+          <%= f.text_field :introduce, class: "form-control" %>
+        </div><br/>
+
+        <div class="form-group">
           <%= f.label :email, "メールアドレス" %><br />
           <%= f.email_field :email, autofocus: true, class: 'input form-control' %>
         </div><br/>
