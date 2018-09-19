@@ -8,8 +8,12 @@
         <div class="col-md-4 col-md-offset-4 user-profile">
             <h4><%= @user.username %></h4>
             <!-- image -->
-            <p><%= link_to image_tag("/images/icon.png" , alt: "usericon"), user_path(@user) %></p>
 
+            <% if @user.avatar.url == nil  %>
+                <p><%= link_to image_tag("/images/icon.png" , alt: "usericon"), user_path(@user) %></p>
+            <% else %>
+                <p><%= link_to image_tag(@user.avatar.url , alt: @user.username), user_path(@user) %></p>
+            <% end %>
             <% if @user == current_user %>
                 <%= link_to "プロフィールの編集", edit_user_path(@user), class: "btn btn-large btn-info" %>
             <% end %>

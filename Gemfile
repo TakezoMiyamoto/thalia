@@ -47,7 +47,7 @@ gem 'twitter-bootstrap-rails', '4.0.0'
 
 # for image uploader with AWS S3
 gem 'carrierwave'
-gem 'fog-aws'
+gem 'fog'
 gem 'mini_magick'
 
 # form
