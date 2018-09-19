@@ -7,7 +7,19 @@ CarrierWave.configure do |config|
   }
 
   config.fog_public = true
+  case Rails.env
+    when 'production'
+      config.fog_directory = 'thalia2018-production'
 
-  config.fog_directory = 'thalia2018'
+
+    when 'development'
+      config.fog_directory = 'thalia2018'
+
+
+    when 'test'
+      config.fog_directory = 'thalia2018'
+
+  end
+
   config.cache_storage = :fog
 end
