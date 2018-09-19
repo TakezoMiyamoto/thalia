@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <title><%= 'Thalia' %></title>
+  <!-- #meta information -->
+  <%= yield :head %>
     <meta name='viewport' content="width=devise-width, initial-scale=1.0"
-    <title>Thalia</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,11 +17,7 @@
   </head>
 
   <body>
-    <script type="text/javascript" charset="utf-8">
-      $(function(){
-        $.material.init();
-      });
-    </script>
+
     <%= render partial: 'common/header' %>
     <div class="container">
       <div class="row">

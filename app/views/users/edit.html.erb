@@ -1,0 +1,38 @@
+<% content_for :head do %>
+  <meta name="title" content="<%=@user.username %>ページの編集">
+  <meta name="description" content="<%=@user.username %>の情報の編集">
+<% end %>
+
+<div class="container">
+  <div class="row form">
+    <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 edit_profile">
+      <h2 style="text-align: center;">プロフィール編集</h2>
+
+      <%= simple_form_for(@user) do |f| %>
+      <%= f.error_notification %>
+        <div class="form-group">
+          <%= f.text_field :username, label:'お名前',autofocus: true, class: 'input form-control' %><em>(最大6文字)</em>
+        </div><br/>
+
+        <div class="form-group">
+          <%= f.label :avatar, "プロフィール画像" %>
+          <%= f.file_field :avatar, class: "form-control" %>
+        </div><br/>
+
+        <div class="form-group">
+          <%= f.label :email, "メールアドレス" %><br />
+          <%= f.email_field :email, autofocus: true, class: 'input form-control' %>
+        </div><br/>
+
+
+
+        <div class="actions">
+          <%= f.submit "プロフィールを更新する", class: 'btn btn-primary withripple center-block' %>
+        </div>
+      <% end %><br/>
+      <div>
+
+      </div>
+    </div>
+  </div>
+</div>
