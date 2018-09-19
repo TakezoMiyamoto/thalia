@@ -5,7 +5,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-3 user-profile">
+        <div class="col-md-4 col-md-offset-4 user-profile">
             <h4><%= @user.username %></h4>
             <!-- image -->
             <p><%= link_to image_tag("/images/icon.png" , alt: "usericon"), user_path(@user) %></p>
