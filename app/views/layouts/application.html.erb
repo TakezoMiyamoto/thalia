@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
     <title><%= 'Thalia' %></title>
   <!-- #meta information -->
   <%= yield :head %>
-    <meta name='viewport' content="width=devise-width, initial-scale=1.0"
+    <meta name='viewport' content="width=devise-width, initial-scale=1.0">
 
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true  %>
