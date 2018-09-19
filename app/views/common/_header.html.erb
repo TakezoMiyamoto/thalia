@@ -10,11 +10,7 @@
 
       <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav pull-right">
-                <li>
-                    <%= link_to "プロジェクトをはじめる", "#"  %>
-                </li>
-                <li><%= link_to "プロジェクトを探す", "#" %></li>
-                <li><%= link_to "Zadankaiとは？",  "#"  %></li>
+                <li><%= link_to "What is Thalia？",  "#"  %></li>
                  <% if user_signed_in? %>
                     <li>
                       <%= link_to "マイページ", user_path(current_user) %>

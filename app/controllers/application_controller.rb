@@ -5,13 +5,13 @@ class ApplicationController < ActionController::Base
   protected
 
     def configure_permitted_parameters
-      # sign_inのときに、usernameも許可する
+      # sign_inのときに、username, avatarも許可する
       devise_parameter_sanitizer.permit(:sign_in, keys: [:username])
       devise_parameter_sanitizer.permit(:sign_in, keys: [:avatar])
-      # sign_upのときに、usernameも許可する
+      # sign_upのときに、username, avatarも許可する
       devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
       devise_parameter_sanitizer.permit(:sign_up, keys: [:avatar])
-      #  account_updateのときに、usernameも許可する
+      #  account_updateのときに、username, avatarも許可する
       devise_parameter_sanitizer.permit(:account_update, keys: [:username])
       devise_parameter_sanitizer.permit(:account_update, keys: [:avatar])
 
