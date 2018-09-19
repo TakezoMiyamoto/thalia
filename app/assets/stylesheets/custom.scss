@@ -1,0 +1,18 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: center;
+        .navbar-nav{
+            margin: 0 auto;
+            display: table;
+            table-layout: fixed;
+            float:none;
+            color: #F6A2BF;
+            font-size: .8em;
+            letter-spacing: .225em;
+            list-style: none;
+        }
+}
