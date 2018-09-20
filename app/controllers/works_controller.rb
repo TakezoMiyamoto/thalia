@@ -32,7 +32,7 @@ class WorksController < ApplicationController
 
   def update
     @work = Work.find(params[:id])
-    if @work.update(works_params)
+    if @work.update(edit_work_params)
       flash[:success] = 'ワーク内容が更新されました。'
       redirect_to @work
     else
@@ -51,7 +51,11 @@ class WorksController < ApplicationController
   private
 
   def works_params
-    params.require(:works).permit(:youtube_id, :title, :description, :youtube_url)
+    params.require(:work).permit(:title, :description, :youtube_url)
+  end
+
+  def edit_work_params
+    params.require(:work).permit(:title, :description, :youtube_url)
   end
 
   def works_owner
