@@ -51,7 +51,7 @@ class WorksController < ApplicationController
   private
 
   def works_params
-    params.require(:works).permit(:youtube_id)
+    params.require(:works).permit(:youtube_id, :title, :description, :youtube_url)
   end
 
   def works_owner
