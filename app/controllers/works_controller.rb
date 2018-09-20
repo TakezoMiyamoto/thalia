@@ -21,6 +21,7 @@ class WorksController < ApplicationController
     @work = current_user.works.build(works_params)
     if @work.save
       flash[:success] = "新規Workを作成しました！"
+      redirect_to @work
     else
       render 'new'
     end
