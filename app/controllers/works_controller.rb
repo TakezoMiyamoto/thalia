@@ -4,7 +4,7 @@ class WorksController < ApplicationController
   require 'date'
 
   def index
-    @works = Work.order(created_at: desc)
+    @works = Work.order(created_at: :desc)
     @title = 'ワークス一覧'
   end
 
