@@ -6,11 +6,20 @@ module WorksHelper
     end
   end
 
-def imaged(youtube_url)
-  youtube_id = youtube_url.split("=").last
-  image_tag("//img.youtube.com/vi/#{youtube_id}/mqdefault.jpg")
-end
+  def imaged(youtube_url)
+    youtube_id = youtube_url.split("=").last
+    img_tag("//img.youtube.com/vi/#{youtube_id}/mqdefault.jpg")
+  end
 
-
+  def img_tag(path)
+      if path.blank?
+        logger.error('InvalidImagePath path is blank')
+        path = 'images/no_image.png'
+      end
+      image_tag path
+    rescue StandardError
+      logger.error("InvalidImagePath : #{path}")
+      image_tag 'images/no_image.png'
+    end
 
 end
