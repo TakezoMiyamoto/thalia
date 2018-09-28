@@ -3,13 +3,20 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+
+  require 'devise/orm/active_record'
+  config.omniauth :google_oauth2,
+                  ENV['GOOGLE_APP_ID'], # 環境変数に先ほど控えたクライアントIDを入れておく
+                  ENV['GOOGLE_APP_SECRET'], # 環境変数に先ほど控えたシークレットを入れておく
+                  name: :google,
+                  scope: %w(email)
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '5def6ec74f359a25a3bc172574c7cdc03374e526d8d361c77afe1a9fcc197a7b6433b9136dea7b230ca4cf81b0492dc7860643a381c4aa949ed26f6785838d57'
-  
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
