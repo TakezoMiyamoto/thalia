@@ -39,6 +39,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pry-rails'
 
 gem 'devise'
+# Google oauth 認証
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+
 gem 'paperclip'
 gem 'kaminari'
 gem 'jquery-rails'
