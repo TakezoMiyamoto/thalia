@@ -5,7 +5,7 @@
 
 <div class="container index-work">
     <div class="container">
-      <%= link_to 'Signin with Google', user_omniauth_authorize_path(:google) %>
+      <%= link_to 'Signin with Google',  user_google_omniauth_authorize_path %>
 
       <%= render 'works/list' , works: @works %>
     </div>

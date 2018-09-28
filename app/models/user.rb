@@ -14,7 +14,6 @@ class User < ApplicationRecord
 
      unless user
        user = User.create(username:     auth.info.username,
-                          avatar: auth.avatar,
                           password: Devise.friendly_token[0, 20],
                           )
      end
