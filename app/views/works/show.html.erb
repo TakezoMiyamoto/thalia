@@ -16,7 +16,12 @@
         <% end %>
       </div>
       <p><%= @work.description %></p>
-
+      <div>
+        <% if current_user == @work.user && current_user != nil %>
+            <%= link_to "Work edit", edit_work_path(@work), class: "btn btn-large btn-default edit-btn" %>
+        <% end %>
+      </div>
     </div>
+
   </div>
 </div>
