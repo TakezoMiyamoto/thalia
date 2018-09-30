@@ -52,6 +52,7 @@ gem 'mini_magick'
 
 # screenshot
 gem 'streamio-ffmpeg'
+gem 'video_thumbnailer'
 
 # form
 gem 'simple_form'
