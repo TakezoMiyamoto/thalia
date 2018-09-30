@@ -50,6 +50,9 @@ gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
 
+# screenshot
+gem 'streamio-ffmpeg'
+
 # form
 gem 'simple_form'
 

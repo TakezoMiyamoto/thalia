@@ -52,11 +52,11 @@ class WorksController < ApplicationController
   private
 
   def works_params
-    params.require(:work).permit(:title, :description, :youtube_url)
+    params.require(:work).permit(:title, :description, :youtube_url, :video)
   end
 
   def edit_work_params
-    params.require(:work).permit(:title, :description, :youtube_url)
+    params.require(:work).permit(:title, :description, :youtube_url, :video)
   end
 
   def works_owner
