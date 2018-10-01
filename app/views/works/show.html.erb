@@ -13,13 +13,6 @@
       <div class= "youtube-container">
         <%= link_to @work.video_url.to_s do %>
           <%= image_tag(@work.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
-          <%= flowplayer_for :video, '/flowplayer.swf' do |player|
-          player.playlist [{:autoplay => true,
-                            :autoBuffering => true}]
-          player.onload do
-            'this.unmute();'
-          end
-        end%>
         <% end %>
       </div>
       <p><%= @work.description %></p>
