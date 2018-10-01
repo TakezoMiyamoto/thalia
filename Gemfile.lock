@@ -106,6 +106,8 @@ GEM
     ffi (1.9.25)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
+    flowplayer (0.1.4)
+      json
     fog (2.0.0)
       fog-aliyun (>= 0.1.0)
       fog-atmos
@@ -468,6 +470,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
+  flowplayer
   fog
   jbuilder (~> 2.5)
   jquery-rails

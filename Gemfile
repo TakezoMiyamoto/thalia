@@ -54,6 +54,9 @@ gem 'mini_magick'
 gem 'streamio-ffmpeg'
 gem 'video_thumbnailer'
 
+
+gem 'flowplayer'
+
 # form
 gem 'simple_form'
 
