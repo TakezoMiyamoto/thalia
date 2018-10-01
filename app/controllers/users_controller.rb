@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @userName = @user.username
+    @works = @user.works.group('works.id')
 
   end
 
